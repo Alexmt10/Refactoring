@@ -6,17 +6,11 @@ public class Ejer3 {
 
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
-
-		String frase;
 		
-
-		System.out.println("Escrribe una frase");
-
-		frase = sc.next();
-
-		String caracter = cosas(frase);
-
-		System.out.println("La frase con el signo <>  aÃ±adido a la mitad es " + caracter);
+		System.out.println("Escribe una frase");
+		String frase = sc.next();
+		
+		System.out.println("La frase con el signo <>  añadido a la mitad es " + espacio(frase));
 
 		sc.close();
 		
@@ -24,17 +18,13 @@ public class Ejer3 {
 
 	}
 
-	public static String cosas(String frase) {
+	public static String espacio(String frase) {
+		int longitud = frase.length();
+		int mitad = frase.length() / 2;
 
-		int mitad;
-		String respuesta;
+		nuevaFrase = frase.substring(0, mitad) + "<>"  + frase.substring(mitad);
 
-		String cosa = "<>";
-		mitad = frase.length() / 2;
-
-		respuesta = frase.substring(0, mitad) + cosa + frase.substring(mitad);
-
-		return respuesta;
+		return fraseNueva;
 
 	}
 	
