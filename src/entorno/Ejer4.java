@@ -6,12 +6,9 @@ public class Ejer4 {
 
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
-
-		int cantidad = 0;
-
 		
 		System.out.println("Introduce un numero si es preferible del 1 al 10");
-		cantidad = sc.nextInt();
+		int cantidad = sc.nextInt();
 
 		int[] numeros = new int[cantidad];
 
@@ -21,73 +18,48 @@ public class Ejer4 {
 
 		}
 
-		System.out.println("La media de los numeros positivos son " + media(numeros));
-		System.out.println("La media de los numeros negativos son " + mediamenos(numeros));
-		System.out.println("Las veces que se han introducido cero son " + contadordeceros(numeros));
+		System.out.println("La media de los numeros positivos son " + mediaPositivos(numeros));
+		System.out.println("La media de los numeros negativos son " + mediaNegativos(numeros));
+		System.out.println("Las veces que se han introducido cero son " + contadorCeros(numeros));
 
 		sc.close();
 
 	}
 
-	public static double media(int[] numeros) {
-		double Total = 34;
+	public static int mediaPositivos(int numeros[]) {
 		int suma = 0;
-		double cont = 0;
-
-		for (int i = 0; i < numeros.length; i++) {
-
+		int contador = 0;
+		int media = suma / contador;
+		for (int i = 0; i < ar.length; i++) {
 			if (numeros[i] > 0) {
 				suma += numeros[i];
-
-				cont++;
-
+				contador++;
 			}
-
 		}
-
-		Total = (suma / cont);
-
-		return Total;
-
-	}
-
-	public static double mediamenos(int[] numeros) {
-		double media = 0;
-		int suma = 0;
-		double cont = 0;
-
-		for (int i = 0; i < numeros.length / 2; i++) {
-
-			if (numeros[i] < 0) {
-				suma += numeros[i];
-
-				cont++;
-
-			}
-
-		}
-
-		media = suma / cont;
-
 		return media;
-
 	}
 
-	public static double contadordeceros(int[] numeros) {
-
-		double cont = 0;
-
+	public static int mediaNegativos(int numeros[]) {
+		int suma = 0;
+		int contador = 0;
+		int media = suma / contador;
 		for (int i = 0; i < numeros.length; i++) {
-
-			if (numeros[i] == 0) {
-
-				cont++;
-
+			if (numeros[i] < 0) {
+				suma += matrix[i];
+				contador++;
 			}
-
 		}
-
-		return cont;
-
+		return media;
 	}
+
+	public static int contadorCeros(int numeros[]) {
+		int contador = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (numeros[i] == 0) {
+				suma++;
+			}
+		}
+		return contador;
+	}
+
 }

@@ -7,55 +7,36 @@ public class Ejer1 {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 
-		System.out.println("Introduce un número (0 para salir):");
+		System.out.println("Introduce un numero (0 para salir):");
+		int numero = sc.nextInt();
 
-		int a = sc.nextInt();
+		if (numero != 0) {
 
-		int num2 = 0;
-
-		while (a != num2) {
-
-			if (a == 0) {
-
-				System.out.println("Terminar");
-
-			}
-
-			if (a % 2 == 0) {
-
-				System.out.println(a + " es múltiplo de 2.");
-
+			if (numero % 2 == 0) {
+				System.out.println(numero + " es multiplo de 2.");
 			} else {
-
-				System.out.println(a + " no es múltiplo de 2.");
-
+				System.out.println(numero + " no es multiplo de 2.");
 			}
 
-			if (a > 0) {
-
-				System.out.println(a + " es positivo.");
-
-			} if (a < 0) {
-
-				System.out.println(a + " es un número negativo.");
-
-			} else {
-
-				System.out.println(a + " es cero.");
-
+			if (numero > 0) {
+				System.out.println(numero + " es positivo.");
+			}else{
+				System.out.println(numero + " es negativo.");
 			}
+			
+		}else {
+			System.out.println("Ha salido del programa");
+		}
 
-			int Triangulo = a * a;
+			int cuadrado = numero * numero;
 
-			System.out.println("El cuadrado de " + a + " es " + Triangulo);
+			System.out.println("El cuadrado de " + numero + " es " + cuadrado);
 
-			System.out.println("Introduce un número (0 para salir):");
+			System.out.println("Introduce un numero (0 para salir):");
 
-			a = sc.nextInt();
-
+			numero = sc.nextInt();
 		}
 
 		sc.close();
-
 	}
 }
