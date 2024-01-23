@@ -6,18 +6,18 @@ public class Ejer5 {
 
 	public static void main(String[] args) {
 	      var sc = new Scanner(System.in);
-	        String perro;
+	        
 	        System.out.println("Introduce tu nombre completo");
-	        perro = sc.nextLine();
+	        String nombreCompleto = sc.nextLine();
 
-	        String resultado = subsistir(perro);
+	        String resultado = sinVocales(nombreCompleto);
 	        System.out.println("Nombre sin vocales: " + resultado);
 	        
 	        sc.close();
 	        
 	    }
 
-	    public static String subsistir(String nombre) {
+	    public static String sinVocales(String nombre) {
 	        nombre = nombre.toLowerCase();
 
 	        String vocales = "aeiouáéíóú";

@@ -7,14 +7,14 @@ public class Ejer3 {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 
-		String frase;
+		
 		
 
 		System.out.println("Escrribe una frase");
 
-		frase = sc.next();
+		String frase = sc.next();
 
-		String caracter = cosas(frase);
+		String caracter = introducirSimbolos(frase);
 
 		System.out.println("La frase con el signo <>  añadido a la mitad es " + caracter);
 
@@ -24,15 +24,15 @@ public class Ejer3 {
 
 	}
 
-	public static String cosas(String frase) {
+	public static String introducirSimbolos(String frase) {
 
 		int mitad;
 		String respuesta;
 
-		String cosa = "<>";
+		String separador = "<>";
 		mitad = frase.length() / 2;
 
-		respuesta = frase.substring(0, mitad) + cosa + frase.substring(mitad);
+		respuesta = frase.substring(0, mitad) + separador + frase.substring(mitad);
 
 		return respuesta;
 
@@ -40,10 +40,10 @@ public class Ejer3 {
 	
 	public static String insertar(String insertar) {
 		
-		String frasefinal =insertar;
+		String fraseFinal =insertar;
 		
-		System.out.println("La diferencia entre la frase original y finsl es de "+ frasefinal);
-		return frasefinal;
+		System.out.println("La diferencia entre la frase original y final es de "+ fraseFinal);
+		return fraseFinal;
 		
 	}
 

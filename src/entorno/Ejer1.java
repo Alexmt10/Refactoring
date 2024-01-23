@@ -9,49 +9,49 @@ public class Ejer1 {
 
 		System.out.println("Introduce un número (0 para salir):");
 
-		int a = sc.nextInt();
+		int numeroIntroducido = sc.nextInt();
 
 		int num2 = 0;
 
-		while (a != num2) {
+		while (numeroIntroducido != num2) {
 
-			if (a == 0) {
+			if (numeroIntroducido == 0) {
 
 				System.out.println("Terminar");
 
 			}
 
-			if (a % 2 == 0) {
+			if (numeroIntroducido % 2 == 0) {
 
-				System.out.println(a + " es múltiplo de 2.");
-
-			} else {
-
-				System.out.println(a + " no es múltiplo de 2.");
-
-			}
-
-			if (a > 0) {
-
-				System.out.println(a + " es positivo.");
-
-			} if (a < 0) {
-
-				System.out.println(a + " es un número negativo.");
+				System.out.println(numeroIntroducido + " es múltiplo de 2.");
 
 			} else {
 
-				System.out.println(a + " es cero.");
+				System.out.println(numeroIntroducido + " no es múltiplo de 2.");
 
 			}
 
-			int Triangulo = a * a;
+			if (numeroIntroducido > 0) {
 
-			System.out.println("El cuadrado de " + a + " es " + Triangulo);
+				System.out.println(numeroIntroducido + " es positivo.");
+
+			}else if (numeroIntroducido < 0) {
+
+				System.out.println(numeroIntroducido + " es un número negativo.");
+
+			} else {
+
+				System.out.println(numeroIntroducido + " es cero.");
+
+			}
+
+			int productoCuadrado = numeroIntroducido * numeroIntroducido;
+
+			System.out.println("El cuadrado de " + numeroIntroducido + " es " + productoCuadrado);
 
 			System.out.println("Introduce un número (0 para salir):");
 
-			a = sc.nextInt();
+			numeroIntroducido = sc.nextInt();
 
 		}
 

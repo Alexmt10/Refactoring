@@ -7,11 +7,11 @@ public class Ejer4 {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 
-		int cantidad = 0;
+		
 
 		
 		System.out.println("Introduce un numero si es preferible del 1 al 10");
-		cantidad = sc.nextInt();
+		int cantidad = sc.nextInt();
 
 		int[] numeros = new int[cantidad];
 
@@ -21,16 +21,16 @@ public class Ejer4 {
 
 		}
 
-		System.out.println("La media de los numeros positivos son " + media(numeros));
-		System.out.println("La media de los numeros negativos son " + mediamenos(numeros));
-		System.out.println("Las veces que se han introducido cero son " + contadordeceros(numeros));
+		System.out.println("La media de los numeros positivos son " + calculoMedia(numeros));
+		System.out.println("La media de los numeros negativos son " + calculoMediaNegativos(numeros));
+		System.out.println("Las veces que se han introducido cero son " + contadorDeCeros(numeros));
 
 		sc.close();
 
 	}
 
-	public static double media(int[] numeros) {
-		double Total = 34;
+	public static double calculoMedia(int[] numeros) {
+		double total;
 		int suma = 0;
 		double cont = 0;
 
@@ -45,13 +45,13 @@ public class Ejer4 {
 
 		}
 
-		Total = (suma / cont);
+		total = (suma / cont);
 
-		return Total;
+		return total;
 
 	}
 
-	public static double mediamenos(int[] numeros) {
+	public static double calculoMediaNegativos(int[] numeros) {
 		double media = 0;
 		int suma = 0;
 		double cont = 0;
@@ -73,7 +73,7 @@ public class Ejer4 {
 
 	}
 
-	public static double contadordeceros(int[] numeros) {
+	public static double contadorDeCeros(int[] numeros) {
 
 		double cont = 0;
 

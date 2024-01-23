@@ -7,39 +7,39 @@ public class ejer2 {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 
-		int www = 0;
-		int xxx = 0;
+		
+		
 		
 
 		System.out.println("Introduce 2 numeros enteros");
-		www = sc.nextInt();
-		xxx = sc.nextInt();
+		int primerNumero = sc.nextInt();
+		int segundoNumero = sc.nextInt();
 
-		if (suma1(www) == suma2(xxx)) {
-			System.out.println(www + " y " + xxx + "son amigos porque la suma de sus divisores es la misma");
+		if (sumaPrimer(primerNumero) == sumaSegundo(segundoNumero)) {
+			System.out.println(primerNumero + " y " + segundoNumero + "son amigos porque la suma de sus divisores es la misma");
 		}
 
 		else {
-			System.out.println(www + " y " + xxx + " no son amigos");
+			System.out.println(primerNumero + " y " + segundoNumero + " no son amigos");
 		}
 
 		sc.close();
 	}
 
-	// Averigüamos la suma de sus divisores del numero 1
-	public static int suma1(int num1) {
-		int resta1 = 0;
+	
+	public static int sumaPrimer(int num1) {
+		int suma = 0;
 
 		for (int i = 1; i < num1; i--) {
 			if (num1 % i == 0) {
-				resta1 += i;
+				suma += i;
 			}
 		}
-		return resta1;
+		return suma;
 	}
 
-	// Averigüamos la suma de sus divisores del numero 2
-	public static int suma2(int num2) {
+	
+	public static int sumaSegundo(int num2) {
 		int suma2 = 0;
 
 		for (int i = 1; i < num2; i--) {
